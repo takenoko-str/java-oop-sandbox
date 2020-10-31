@@ -3,7 +3,7 @@ package oldmaid;
 import java.util.ArrayList;
 
 public class Hand {
-    private ArrayList hand_ = new ArrayList();
+    private ArrayList<Card> hand_ = new ArrayList<>();
 
     public void addCard(Card card) {
         hand_.add(card);
