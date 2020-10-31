@@ -1,3 +1,5 @@
+package janken;
+
 public class Player {
     public static final int STONE = 0;
     public static final int SCISSORS = 1;

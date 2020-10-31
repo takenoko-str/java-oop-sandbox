@@ -1,3 +1,5 @@
+package janken;
+
 public class Judge {
     public void startJanken(Player player1, Player player2) {
         System.out.println("first comes lock...\n");

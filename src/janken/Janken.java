@@ -1,3 +1,5 @@
+package janken;
+
 public class Janken {
     public static void main(String[] args) {
         Judge saito = new Judge();
