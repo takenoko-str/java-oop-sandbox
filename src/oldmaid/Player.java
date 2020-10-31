@@ -1,7 +1,5 @@
 package oldmaid;
 
-import java.awt.font.MultipleMaster;
-
 public class Player {
     private Master master_;
     private Table table_;
@@ -17,6 +15,7 @@ public class Player {
 
     public void play(Player nextPlayer) {
         Hand nextHand = nextPlayer.showHand();
+        System.out.println(nextPlayer + ":" + nextHand);
         Card pickedCard = nextHand.pickCard();
         System.out.println(this + ":" + nextPlayer + "さんから" + pickedCard + "を引きました");
 
