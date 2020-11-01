@@ -11,11 +11,11 @@ public class Master {
         int numberOfCards = cards.getNumberOfCards();
 
         int numberOfPlayers = players_.size();
-        System.out.print(cards);
 
         for (int index = 0; index < numberOfCards; index++) {
             Card card = cards.pickCard();
             Player player = (Player) players_.get(index % numberOfPlayers);
+            player.receiveCard(card);
         }
     }
 
