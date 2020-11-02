@@ -1,13 +1,14 @@
 import random as rm
 
-class Hand():
+
+class Hand:
 
     # card クラスをリストとして保持
-    def __init__(self,list):
+    def __init__(self, list):
         self.hand = list
 
     # カードを追加
-    def add_card(self,card):
+    def add_card(self, card):
         self.hand.append(card)
 
     # カードを引く（先頭）
@@ -37,14 +38,13 @@ class Hand():
         last_added_card = self.hand[-1]
         last_added_card_num = last_added_card.number
 
-        for index in range(len(self.hand)-1):
+        for index in range(len(self.hand) - 1):
 
             card = self.hand[index]
             if card.number == last_added_card_num:
-
                 # 最後に追加されたカードと同じカードが見つかった場合
                 # 見つかった組み合わせをsameCardsに格納し、ループを抜ける
-                same_cards = [self.hand.pop(-1),self.hand.pop(index)]
+                same_cards = [self.hand.pop(-1), self.hand.pop(index)]
                 break
 
         return same_cards

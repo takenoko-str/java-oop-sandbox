@@ -1,9 +1,9 @@
-class Master():
+class Master:
 
-    def __init__(self,player_list):
+    def __init__(self, player_list):
         self.player_list = player_list
 
-    def prepare_game(self,hand):
+    def prepare_game(self, hand):
         print("【カードを配ります】\n")
 
         # トランプをシャッフルする
@@ -16,14 +16,12 @@ class Master():
         number_of_players = len(self.player_list)
 
         for index in range(number_of_cards):
-
             # カードから一枚引く
             card = hand.pick_card()
 
             # 各プレイヤーに順番にカードを配る
             player = self.player_list[index % number_of_players]
             player.receive_card(card)
-
 
     # ゲームを開始する。
     def start_game(self):
@@ -48,9 +46,8 @@ class Master():
         # プレイヤーが上がって残り1名になるとループを抜ける
         print("【ばば抜きを終了しました】\n")
 
-
     # 上がりを宣言する。
-    def declare_win(self,winner):
+    def declare_win(self, winner):
         # 上がったプレイヤー
         print(winner.name, "さんが上がりました！\n")
 
@@ -62,7 +59,6 @@ class Master():
             loser = self.player_list[0]
             print(loser.name, "さんの負けです！\n")
 
-
     # ゲームに参加するプレイヤーを登録する。
-    def register_player(self,player):
+    def register_player(self, player):
         self.player_list.append(player)

@@ -1,4 +1,4 @@
-class Card():
+class Card:
 
     # ジョーカーを表す定数
     JOKER = 0

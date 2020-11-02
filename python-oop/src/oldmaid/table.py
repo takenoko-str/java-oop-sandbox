@@ -1,4 +1,4 @@
-class Table():
+class Table:
 
     def __init__(self):
         self.disposed_cards = []

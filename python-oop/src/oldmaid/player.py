@@ -1,4 +1,4 @@
-class Player():
+class Player:
 
     def __init__(self,name,hand,master,table):
         self.hand = hand
